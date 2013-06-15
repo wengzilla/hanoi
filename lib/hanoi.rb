@@ -20,9 +20,7 @@ class Hanoi
   end
 
   def move_ring_if_valid(start_index, end_index)
-    return false unless valid_move?(start_index, end_index)
-
-    move_ring(start_index, end_index)
+    move_ring(start_index, end_index) if valid_move?(start_index, end_index)
   end
 
   def move_ring(start_index, end_index)

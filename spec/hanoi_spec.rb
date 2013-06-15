@@ -35,10 +35,10 @@ describe Hanoi do
 
   context "#move_ring_if_valid" do
     context "given an invalid move" do
-      it "returns false and leaves the current_state unmodified" do
+      it "leaves the current_state unmodified" do
         @h.should_receive(:valid_move?).once.with(1,2).and_return(false)
         @h.should_receive(:move_ring).never
-        @h.move_ring_if_valid(1,2).should eq false
+        @h.move_ring_if_valid(1,2).should eq nil
       end
     end
 
